@@ -80,7 +80,7 @@ public class MyActivity extends Activity {
         List<NameValuePair> nameValuePairs;
         HttpPost httppost;
         httpclient=new DefaultHttpClient();
-        httppost= new HttpPost("http://192.168.0.11/picarcodigo/insert.php"); // Url del Servidor
+        httppost= new HttpPost("http://bd.mumus.es/insert.php"); // Url del Servidor
         //Añadimos nuestros datos
         nameValuePairs = new ArrayList<NameValuePair>(4);
         nameValuePairs.add(new BasicNameValuePair("dni",dni.getText().toString().trim()));
@@ -121,8 +121,8 @@ public class MyActivity extends Activity {
                     public void run() {
                         // TODO Auto-generated method stub
                         Toast.makeText(context, "Persona insertada con éxito", Toast.LENGTH_LONG).show();
-                        nombre.setText("");
                         dni.setText("");
+                        nombre.setText("");
                         telefono.setText("");
                         email.setText("");
                     }
